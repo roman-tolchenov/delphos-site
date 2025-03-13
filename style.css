@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.audio-progress {
+  transition: width 0.1s linear;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Hover effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* Active state for buttons */
+.active\:scale-95:active {
+  transform: scale(0.95);
+}
+
+.faq-container {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 0.5rem;
+}
+
+.faq-toggle {
+  display: none;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.faq-question:hover {
+  color: var(--hover-color);
+}
+
+.icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 1rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.faq-answer p {
+  position: relative;
+  margin: 0;
+}
+
+.faq-answer p::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 0.25em;
+  bottom: 0.25em;
+  width: 1px;
+  background-color: #888888;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.faq-toggle:checked + .faq-question .icon {
+  transform: rotate(45deg);
+}
+
+.faq-toggle:checked + .faq-question + .faq-answer {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.faq-toggle:checked + .faq-question + .faq-answer p::before {
+  opacity: 1;
+}
+
+.arrow {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover .arrow {
+  transform: translateY(-10px); /* Moves the arrow up */
+  opacity: 0; /* Makes the arrow disappear */
+}

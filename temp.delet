@@ -1,0 +1,7 @@
+    <!-- Terms and Conditions Section -->
+    <section class="max-w-4xl mx-auto px-6 py-16 mt-12">
+        <h1 class="text-3xl font-bold text-center text-blue-400">Terms and Conditions</h1>
+        <p class="mt-6 text-gray-300 leading-relaxed">
+            By using Delphos Music, you agree to the following terms and conditions. The content, services, and materials provided on this website are for informational purposes only. Unauthorized reproduction, distribution, or modification of any content is strictly prohibited. Delphos Music reserves the right to modify these terms at any time, with or without notice. Continued use of our services constitutes acceptance of the updated terms. If you do not agree with any part of these terms, please discontinue use of our website and services immediately.
+        </p>
+    </section>
